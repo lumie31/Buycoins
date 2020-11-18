@@ -1,2 +1,2 @@
-# Buycoins | Frontend Engineer Assessment
+# BuyCoins | Frontend Engineer Assessment
 Something awesome would be written here soon.

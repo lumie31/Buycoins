@@ -1,4 +1,86 @@
+.container {
+  box-sizing: border-box;
+  margin: 0 10px;
+}
 .nav {
   display: flex;
   justify-content: space-between;
+}
+.userimage {
+  width:75px;
+  height:75px;
+  border: 1px solid lightgray;
+  border-radius: 100%;
+}
+.userinfo {
+  margin: 7px 0;
+}
+.userinfo__profile {
+  display: flex;
+}
+.username {
+  margin: 10px 0 0 20px;
+}
+.username > h2, p {
+  margin: 0;
+}
+.status {
+  border: 1px solid lightgray;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 7px 0;
+}
+.button--edit-profile {
+  border: 1px solid lightgray;
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px;
+  margin: 10px 0
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+.tabs {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  list-style-type: none;
+  padding: 0;
+  justify-content: space-around;
+}
+.tabs li {
+  /* border: 1px solid; */
+  padding: 10px;
+  display: flex;
+}
+.search {
+  padding:7px;
+  border: 1px solid lightgray;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+form > input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+.dropdown-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.btn--type{
+  margin-right: 5px;
+}
+.filter__dropdowns__btn {
+  padding: 7px 12px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+.new {
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding: 7px 20px;
+
+
 }

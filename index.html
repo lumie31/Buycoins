@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buycoins | Frontend Assessment</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="container">
     <div class="nav">
@@ -15,14 +17,73 @@
     </div>
     <div class="userinfo">
       <div class="userinfo__profile">
-        <img src="" alt="avatar">
+        <img src="./assets/Olumide.JPG" alt="avatar" class="userimage">
         <div class="username">
           <h2>Name</h2>
           <p>Handle</p>
         </div>
       </div>
     </div>
+    <div class="status">World best!</div>
+    <p class="job">Software Dev.</p>
+    <button class="button button--edit-profile">Edit profile</button>
+    <div class="contact">
+      <span>icon + email</span>
+      <span>icon + linkedin</span>
+      <span>following + follower + star</span>
+    </div>
+    <ul class="tabs">
+      <li class="tab-item">
+        <a href="#" class="tab-link">Overview</a>
+      </li>
+      <li class="tab-item">
+        <a href="#" class="tab-link active">Repositories</a>
+      </li>
+      <li class="tab-item">
+        <a href="#" class="tab-link">Projects</a>
+      </li>
+      <li class="tab-item">
+        <a href="#" class="tab-link ">Packages</a>
+      </li>
+    </ul>
+    <form action="" class="search">
+      <input type="text" placeholder="Find a repository..." class="">
+    </form>
+    <div class="dropdown-btn">
+      <div class="filter__dropdowns">
+        <button class="filter__dropdowns__btn btn--type">Type: All</button>
+        <button class="filter__dropdowns__btn">Language: All</button>
+      </div>
+      <button class="new">New</button>
+    </div>
+    <hr>
+    <div class="repositories">
+      <div class="repository">
+        <div class="left">
+          <h2>Repo-name</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iusto veritatis qui eum, odio enim, </p>
+          <small class="updated">Updated 2 days ago</small>
+        </div>
+        <div class="right">
+          <button>Star</button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button>Prev</button>
+      <button>Next</button>
+    </div>
+    <footer>
+      <div>
+        <span>&copy; GitHub, Inc.</span>
+        <span>Terms &nbsp; Privacy</span>
+        <span>Security &nbsp; Status</span>
+        <span>Pricing &nbsp; Help</span>
+        <span>Blog &nbsp; Training</span>
+      </div>
+    </footer>
   </div>
   <script src="index.js"></script>
 </body>
+
 </html>

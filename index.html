@@ -6,31 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buycoins | Frontend Assessment</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/d9a8436209.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class="container">
     <div class="nav">
-      <span>hamburger</span>
-      <span>logo</span>
-      <span>notifs</span>
+      <span><i class="fas fa-bars"></i></span>
+      <span><i class="fab fa-github-square fa-3x"></i></span>
+      <span><i class="far fa-bell"></i></span>
+      <!-- <span style="color: #fff;"><img src="./assets/bars-solid.svg" width="20" alt=""></span> -->
+      <!-- <span><img src="./assets/github-square-brands.svg" width="40" alt=""></span> -->
+      <!-- <span><img src="./assets/bell-regular.svg" width="15" alt=""></span> -->
     </div>
     <div class="userinfo">
       <div class="userinfo__profile">
         <img src="./assets/Olumide.JPG" alt="avatar" class="userimage">
         <div class="username">
-          <h2>Name</h2>
-          <p>Handle</p>
+          <h2>Olumide</h2>
+          <p>lumie31</p>
         </div>
       </div>
     </div>
-    <div class="status">World best!</div>
-    <p class="job">Software Dev.</p>
-    <button class="button button--edit-profile">Edit profile</button>
+    <div class="something">
+      <small class="status">🚀&nbsp;World best!</small>
+      <p class="job">Software Dev.</p>
+      <button class="button button--edit-profile">Edit profile</button>
+    </div>
     <div class="contact">
-      <span>icon + email</span>
-      <span>icon + linkedin</span>
-      <span>following + follower + star</span>
+      <span><i class="far fa-envelope"></i>&nbsp;<a>josh@dev.co.za</a></span>
+      <span><i class="fas fa-link"></i>&nbsp;<a>josh@linkedin.com.ng</a></span>
+      <span><i class="fas fa-user-friends"></i>&nbsp;<a><b>46</b> followers | <b>106</b> following | <i class="far fa-star"></i>&nbsp;<b>46</b></a></span>
     </div>
     <ul class="tabs">
       <li class="tab-item">
@@ -38,6 +44,8 @@
       </li>
       <li class="tab-item">
         <a href="#" class="tab-link active">Repositories</a>
+        
+        <span class="badge"><small>25</small></span>
       </li>
       <li class="tab-item">
         <a href="#" class="tab-link">Projects</a>
@@ -56,7 +64,6 @@
       </div>
       <button class="new">New</button>
     </div>
-    <hr>
     <div class="repositories">
       <div class="repository">
         <div class="left">
@@ -65,14 +72,36 @@
           <small class="updated">Updated 2 days ago</small>
         </div>
         <div class="right">
-          <button>Star</button>
+          <button class="star__btn"><i class="far fa-star"></i>&nbsp;Star</button>
+        </div>
+      </div>
+      <div class="repository">
+        <div class="left">
+          <h2>Repo-name</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iusto veritatis qui eum, odio enim, </p>
+          <small class="updated">Updated 2 days ago</small>
+        </div>
+        <div class="right">
+          <button class="star__btn"><i class="far fa-star"></i>&nbsp;Star</button>
+        </div>
+      </div>
+      <div class="repository">
+        <div class="left">
+          <h2>Repo-name</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iusto veritatis qui eum, odio enim, </p>
+          <small class="updated">Updated 2 days ago</small>
+        </div>
+        <div class="right">
+          <button class="star__btn"><i class="far fa-star"></i>&nbsp;Star</button>
         </div>
       </div>
     </div>
-    <div>
-      <button>Prev</button>
-      <button>Next</button>
-    </div>
+    <!-- <div class="ooo"> -->
+      <div class="button prev__next">
+        <button class="btn__group prev">Previous</button>
+        <button class="btn__group next">Next</button>
+      </div>
+    <!-- </div> -->
     <footer>
       <div>
         <span>&copy; GitHub, Inc.</span>

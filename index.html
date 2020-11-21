@@ -12,105 +12,162 @@
 <body>
   <div class="container">
     <div class="nav">
-      <span><i class="fas fa-bars"></i></span>
-      <span><i class="fab fa-github-square fa-3x"></i></span>
-      <span><i class="far fa-bell"></i></span>
-      <!-- <span style="color: #fff;"><img src="./assets/bars-solid.svg" width="20" alt=""></span> -->
-      <!-- <span><img src="./assets/github-square-brands.svg" width="40" alt=""></span> -->
-      <!-- <span><img src="./assets/bell-regular.svg" width="15" alt=""></span> -->
-    </div>
-    <div class="userinfo">
-      <div class="userinfo__profile">
-        <img src="./assets/Olumide.JPG" alt="avatar" class="userimage">
-        <div class="username">
-          <h2>Olumide</h2>
-          <p>lumie31</p>
+      <span class="hamburger"><i class="fas fa-bars"></i></span>
+      <div class="bigscreen__nav">
+        <span><i class="fab fa-github-square fa-3x"></i></span>
+        <div class="hide">
+          <form action="" class="navbar__search">
+            <input type="text" placeholder="Search" class="nav_search">
+          </form>
+          <ul>
+            <li>Pull requests</li>
+            <li>Issues</li>
+            <li>Marketplace</li>
+            <li>Explore</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rightmenu">
+        <span><i class="far fa-bell"></i></span>
+        <div class="hide__rightmenu">
+          <span>
+            <i class="fas fa-plus"></i>&nbsp;
+            <i class="fas fa-caret-down"></i>
+          </span>
+          <span>
+            <img src="./assets/Olumide.jpg" alt="" class="rightmenu__image">&nbsp;
+            <i class="fas fa-caret-down"></i>
+          </span>
         </div>
       </div>
     </div>
-    <div class="something">
-      <small class="status">🚀&nbsp;World best!</small>
-      <p class="job">Software Dev.</p>
-      <button class="button button--edit-profile">Edit profile</button>
+
+    <div class="row">
+      <div class="side">
+        <div class="userinfo">
+          <div class="userinfo__profile">
+            <img src="./assets/Olumide.JPG" alt="avatar" class="userimage" style="position: relative;">
+            <!-- <div style="border: 1px solid red; position:relative"> -->
+              <!-- <span style="position: relative; left:auto; bottom: 10vw; display: flex; justify-content: flex-end;">🚀</span> -->
+            <!-- </div> -->
+            <div class="username">
+              <h2>Olumide</h2>
+              <p>lumie31</p>
+            </div>
+          </div>
+        </div>
+        <div class="about">
+          <small class="status">🚀&nbsp;World best!</small>
+          <p class="job">Software Dev.</p>
+          <button class="button button--edit-profile">Edit profile</button>
+        </div>
+        <div class="contact">
+          <span><i class="far fa-envelope"></i>&nbsp;<a>BuyCoins</a></span>
+          <span><i class="far fa-envelope"></i>&nbsp;<a>Lagos, Nigeria</a></span>
+          <span><i class="far fa-envelope"></i>&nbsp;<a>josh@dev.co.za</a></span>
+          <span><i class="fas fa-link"></i>&nbsp;<a>josh@linkedin.ng</a></span>
+          <span><i class="fas fa-user-friends"></i>&nbsp;<a><b>46</b> followers | <b>106</b> following | <i
+                class="far fa-star"></i>&nbsp;<b>46</b></a></span>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="tabs__parent">
+          <ul class="tabs">
+            <li class="tab-item">
+              <a href="#" class="tab-link">Overview</a>
+            </li>
+            <li class="tab-item">
+              <a href="#" class="tab-link active">Repositories</a>
+
+              <span class="badge"><small>20</small></span>
+            </li>
+            <li class="tab-item">
+              <a href="#" class="tab-link">Projects</a>
+            </li>
+            <li class="tab-item">
+              <a href="#" class="tab-link ">Packages</a>
+            </li>
+          </ul>
+        </div>
+        <div class="search__area">
+          <form action="" class="search">
+            <input type="text" placeholder="Find a repository..." class="">
+          </form>
+          <div class="dropdown-btn">
+            <div class="filter__dropdowns">
+              <button class="filter__dropdowns__btn btn--type">Type: All&nbsp;<i class="fas fa-caret-down"></i></button>
+              <button class="filter__dropdowns__btn">Language: All&nbsp;<i class="fas fa-caret-down"></i></button>
+            </div>
+            <button class="filter__dropdowns__btn new">New</button>
+          </div>
+        </div>
+        <div class="repositories">
+          <div class="repository">
+            <div class="left">
+              <h3>Buycoins</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iusto veritatis qui eum, odio enim, </p>
+              <small class="updated">Updated 2 days ago</small>
+            </div>
+            <div class="right">
+              <button class="star__btn"><i class="far fa-star"></i>&nbsp;Star</button>
+            </div>
+          </div>
+          <div class="repository">
+            <div class="left">
+              <h3>Repo-name</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iusto veritatis qui eum, odio enim, </p>
+              <small class="updated">Updated 2 days ago</small>
+            </div>
+            <div class="right">
+              <button class="star__btn"><i class="far fa-star"></i>&nbsp;Star</button>
+            </div>
+          </div>
+          <div class="repository">
+            <div class="left">
+              <h3>Repo-name</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iusto veritatis qui eum, odio enim, </p>
+              <small class="updated">Updated 2 days ago</small>
+            </div>
+            <div class="right">
+              <button class="star__btn"><i class="far fa-star"></i>&nbsp;Star</button>
+            </div>
+          </div>
+          <div class="repository">
+            <div class="left">
+              <h3>Repo-name</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iusto veritatis qui eum, odio enim, </p>
+              <small class="updated">Updated 2 days ago</small>
+            </div>
+            <div class="right">
+              <button class="star__btn"><i class="far fa-star"></i>&nbsp;Star</button>
+            </div>
+          </div>
+        </div>
+        <div class="button prev__next">
+          <button class="btn__group prev">Previous</button>
+          <button class="btn__group next">Next</button>
+        </div>
+      </div>
     </div>
-    <div class="contact">
-      <span><i class="far fa-envelope"></i>&nbsp;<a>josh@dev.co.za</a></span>
-      <span><i class="fas fa-link"></i>&nbsp;<a>josh@linkedin.com.ng</a></span>
-      <span><i class="fas fa-user-friends"></i>&nbsp;<a><b>46</b> followers | <b>106</b> following | <i class="far fa-star"></i>&nbsp;<b>46</b></a></span>
+    <div class="footer">
+      <ul>
+        <li>
+          <p>&copy; 2020 GitHub, Inc.</p>
+        </li>
+        <li>Terms</li>
+        <li>Privacy</li>
+        <li>Security</li>
+        <li>Status</li>
+        <li>Help</li>
+        <li>Contact GitHub</li>
+        <li>Pricing</li>
+        <li>API</li>
+        <li>Training</li>
+        <li>Blog</li>
+        <li>About</li>
+      </ul>
     </div>
-    <ul class="tabs">
-      <li class="tab-item">
-        <a href="#" class="tab-link">Overview</a>
-      </li>
-      <li class="tab-item">
-        <a href="#" class="tab-link active">Repositories</a>
-        
-        <span class="badge"><small>25</small></span>
-      </li>
-      <li class="tab-item">
-        <a href="#" class="tab-link">Projects</a>
-      </li>
-      <li class="tab-item">
-        <a href="#" class="tab-link ">Packages</a>
-      </li>
-    </ul>
-    <form action="" class="search">
-      <input type="text" placeholder="Find a repository..." class="">
-    </form>
-    <div class="dropdown-btn">
-      <div class="filter__dropdowns">
-        <button class="filter__dropdowns__btn btn--type">Type: All</button>
-        <button class="filter__dropdowns__btn">Language: All</button>
-      </div>
-      <button class="new">New</button>
-    </div>
-    <div class="repositories">
-      <div class="repository">
-        <div class="left">
-          <h2>Repo-name</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iusto veritatis qui eum, odio enim, </p>
-          <small class="updated">Updated 2 days ago</small>
-        </div>
-        <div class="right">
-          <button class="star__btn"><i class="far fa-star"></i>&nbsp;Star</button>
-        </div>
-      </div>
-      <div class="repository">
-        <div class="left">
-          <h2>Repo-name</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iusto veritatis qui eum, odio enim, </p>
-          <small class="updated">Updated 2 days ago</small>
-        </div>
-        <div class="right">
-          <button class="star__btn"><i class="far fa-star"></i>&nbsp;Star</button>
-        </div>
-      </div>
-      <div class="repository">
-        <div class="left">
-          <h2>Repo-name</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iusto veritatis qui eum, odio enim, </p>
-          <small class="updated">Updated 2 days ago</small>
-        </div>
-        <div class="right">
-          <button class="star__btn"><i class="far fa-star"></i>&nbsp;Star</button>
-        </div>
-      </div>
-    </div>
-    <!-- <div class="ooo"> -->
-      <div class="button prev__next">
-        <button class="btn__group prev">Previous</button>
-        <button class="btn__group next">Next</button>
-      </div>
-    <!-- </div> -->
-    <footer>
-      <div>
-        <span>&copy; GitHub, Inc.</span>
-        <span>Terms &nbsp; Privacy</span>
-        <span>Security &nbsp; Status</span>
-        <span>Pricing &nbsp; Help</span>
-        <span>Blog &nbsp; Training</span>
-      </div>
-    </footer>
   </div>
   <script src="index.js"></script>
 </body>

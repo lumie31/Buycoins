@@ -7,6 +7,7 @@
   <title>Buycoins | Frontend Assessment</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/d9a8436209.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body>
@@ -35,7 +36,7 @@
             <i class="fas fa-caret-down"></i>
           </span>
           <span>
-            <img src="./assets/Olumide.jpg" alt="" class="rightmenu__image">&nbsp;
+            <img src="" alt="" class="rightmenu__image">&nbsp;
             <i class="fas fa-caret-down"></i>
           </span>
         </div>
@@ -46,28 +47,28 @@
       <div class="side">
         <div class="userinfo">
           <div class="userinfo__profile">
-            <img src="./assets/Olumide.JPG" alt="avatar" class="userimage" style="position: relative;">
+            <img src="" alt="avatar" class="userimage" style="position: relative;">
             <!-- <div style="border: 1px solid red; position:relative"> -->
               <!-- <span style="position: relative; left:auto; bottom: 10vw; display: flex; justify-content: flex-end;">🚀</span> -->
             <!-- </div> -->
             <div class="username">
               <h2>Olumide</h2>
-              <p>lumie31</p>
+              <p></p>
             </div>
           </div>
         </div>
         <div class="about">
-          <small class="status">🚀&nbsp;World best!</small>
+          <small class="status">
+            🚀&nbsp;<span>World best!</span>
+          </small>
           <p class="job">Software Dev.</p>
           <button class="button button--edit-profile">Edit profile</button>
         </div>
         <div class="contact">
-          <span><i class="far fa-envelope"></i>&nbsp;<a>BuyCoins</a></span>
-          <span><i class="far fa-envelope"></i>&nbsp;<a>Lagos, Nigeria</a></span>
-          <span><i class="far fa-envelope"></i>&nbsp;<a>josh@dev.co.za</a></span>
-          <span><i class="fas fa-link"></i>&nbsp;<a>josh@linkedin.ng</a></span>
-          <span><i class="fas fa-user-friends"></i>&nbsp;<a><b>46</b> followers | <b>106</b> following | <i
-                class="far fa-star"></i>&nbsp;<b>46</b></a></span>
+          <span><i class="far fa-envelope"></i>&nbsp;<a class="email">josh@dev.co.za</a></span>
+          <span><i class="fas fa-link"></i>&nbsp;<a class="linkedin">josh@linkedin.ng</a></span>
+          <span><i class="fas fa-user-friends"></i>&nbsp;<a><b class="followers"></b> followers · <b class="following"></b> following · <i
+                class="far fa-star"></i>&nbsp;<b class="stars"></b></a></span>
         </div>
       </div>
 
@@ -86,7 +87,7 @@
               <a href="#" class="tab-link">Projects</a>
             </li>
             <li class="tab-item">
-              <a href="#" class="tab-link ">Packages</a>
+              <a href="#" class="tab-link "> Packages</a>
             </li>
           </ul>
         </div>
@@ -96,24 +97,44 @@
           </form>
           <div class="dropdown-btn">
             <div class="filter__dropdowns">
-              <button class="filter__dropdowns__btn btn--type">Type: All&nbsp;<i class="fas fa-caret-down"></i></button>
-              <button class="filter__dropdowns__btn">Language: All&nbsp;<i class="fas fa-caret-down"></i></button>
+              <button class="filter__dropdowns__btn btn--type">Type: <b>All</b>&nbsp;<i class="fas fa-caret-down"></i></button>
+              <button class="filter__dropdowns__btn">Language: <b>All</b>&nbsp;<i class="fas fa-caret-down"></i></button>
             </div>
             <button class="filter__dropdowns__btn new">New</button>
           </div>
         </div>
         <div class="repositories">
-          <div class="repository">
+           <div class="repository">
             <div class="left">
-              <h3>Buycoins</h3>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iusto veritatis qui eum, odio enim, </p>
-              <small class="updated">Updated 2 days ago</small>
+              <h3 class="repository__name shine"></h3>
+              <p class="repository__desc shine"></p>
+              <small class="updated shine"></small>
             </div>
             <div class="right">
-              <button class="star__btn"><i class="far fa-star"></i>&nbsp;Star</button>
+              <button class="star__btn shine"></button>
             </div>
           </div>
           <div class="repository">
+            <div class="left">
+              <h3 class="repository__name shine"></h3>
+              <p class="repository__desc shine"></p>
+              <small class="updated shine"></small>
+            </div>
+            <div class="right">
+              <button class="star__btn shine"></button>
+            </div>
+          </div>
+          <div class="repository">
+            <div class="left">
+              <h3 class="shine"></h3>
+              <p class="shine"></p>
+              <small class="updated shine"></small>
+            </div>
+            <div class="right">
+              <button class="star__btn shine"></button>
+            </div>
+          </div>
+          <!-- <div class="repository">
             <div class="left">
               <h3>Repo-name</h3>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iusto veritatis qui eum, odio enim, </p>
@@ -122,27 +143,7 @@
             <div class="right">
               <button class="star__btn"><i class="far fa-star"></i>&nbsp;Star</button>
             </div>
-          </div>
-          <div class="repository">
-            <div class="left">
-              <h3>Repo-name</h3>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iusto veritatis qui eum, odio enim, </p>
-              <small class="updated">Updated 2 days ago</small>
-            </div>
-            <div class="right">
-              <button class="star__btn"><i class="far fa-star"></i>&nbsp;Star</button>
-            </div>
-          </div>
-          <div class="repository">
-            <div class="left">
-              <h3>Repo-name</h3>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iusto veritatis qui eum, odio enim, </p>
-              <small class="updated">Updated 2 days ago</small>
-            </div>
-            <div class="right">
-              <button class="star__btn"><i class="far fa-star"></i>&nbsp;Star</button>
-            </div>
-          </div>
+          </div> -->
         </div>
         <div class="button prev__next">
           <button class="btn__group prev">Previous</button>
@@ -169,7 +170,7 @@
       </ul>
     </div>
   </div>
-  <script src="index.js"></script>
+  <script type="module" src="../index.js"></script>
 </body>
 
 </html>

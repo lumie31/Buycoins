@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Segoe_UI";
-  src: url(./assets/SegoeUI.ttf);
+  src: url('../assets/SegoeUI.ttf');
 }
 
 :root {
@@ -35,11 +35,12 @@ h2 {
   display: none;
 }
 .userimage {
-  height:100px;
+  /* height:100px; */
   border: none;
-  border-radius: 50%;
-  width: 20%;
-  height: auto;
+  object-fit: cover;
+  border-radius: 10vw;
+  width: 20vw;
+  height: 20vw; 
 }
 .userinfo {
   padding: 12px;
@@ -158,11 +159,50 @@ form > input {
 .repository h3 {
   /* color: #0366d6; */
   color: var(--primary);
-
 }
 .updated {
   font-size: 12px;
 }
+/* Animation of Shimmer Background */
+.shine {
+  height: 25px;
+  border: none;
+  background: #f6f7f8;
+  background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 104px; 
+  display: inline-block;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; 
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderShimmer;
+  animation-name: placeholderShimmer;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  }
+  @-webkit-keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  
+  100% {
+    background-position: 468px 0; 
+  }
+}
+
+@keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  
+  100% {
+    background-position: 468px 0; 
+  }
+}
+/* End of animation */
 .left {
   width: 55%;
   display: flex;
@@ -298,9 +338,9 @@ small {
     margin-top: 30px;
     width: 100%;
     height: auto;
-    /* width: 270px;
-    height: 270px; */
+    object-fit: cover;
   }
+ 
   .about {
     display: flex;
     flex-direction: column;

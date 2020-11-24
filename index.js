@@ -22,7 +22,7 @@ const repositories = document.querySelector(".repositories");
 fetch(`https://api.github.com/graphql`, {
   method: "POST",
   headers: {
-    "Authorization": `bearer ${API_KEY}`,
+    "Authorization": `bearer ${API_KEY.split(",")[1]}`,
     "Content-Type": "application/json",
   },
   body: JSON.stringify(data),

@@ -44,4 +44,4 @@ export const query = `
 `;
 
 // GitHub access token - This should be secret. I tried putting this in a separate file and adding the file in a .gitignore but the file couldn't be accessed in production, hence my reason for exposing it.
-export const API_KEY = "0f759c9da2be4b8979b974c574f6c1287e61f46a";
+export const API_KEY = "split,bb8745e1f96b8b123116156ae3cf0f49fdecceb2,flirt";

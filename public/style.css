@@ -1,12 +1,13 @@
 @font-face {
   font-family: "Segoe_UI";
-  src: url('../assets/SegoeUI.ttf');
+  src: url("../assets/SegoeUI.ttf");
 }
 
 :root {
   --primary: #0366d6;
   --gray: lightgray;
   --black: #24292e;
+  --white: #fff;
 }
 
 * {
@@ -14,8 +15,10 @@
   padding: 0;
   font-family: "Segoe_UI";
 }
-p, a, li {
-    font-size: 14px;
+p,
+a,
+li {
+  font-size: 14px;
 }
 p,
 h2 {
@@ -28,25 +31,53 @@ h2 {
   background: var(--black);
   padding: 12px;
 }
-.nav span, .nav li {
-  color: #fff;
+.nav span,
+.nav li {
+  color: var(--white);
 }
-.hide, .hide__rightmenu {
+.nav span:hover,
+.nav li:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.hide,
+.hide__rightmenu {
   display: none;
 }
 .userimage {
-  /* height:100px; */
   border: none;
   object-fit: cover;
   border-radius: 10vw;
   width: 20vw;
-  height: 20vw; 
+  height: 20vw;
+}
+.floating__status {
+  display: none;
+  position: absolute;
+  bottom: 20%;
+  left: 88%;
+  padding: 5px;
+  border-radius: 2em;
+  background: var(--white);
+  border: 1px solid var(--gray);
+}
+.floating__status:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 .userinfo {
   padding: 12px;
 }
 .userinfo__profile {
   display: flex;
+}
+.username h2 {
+  font-size: 26px;
+  color: var(--black);
+}
+.username p {
+  font-size: 20px;
+  color: #586069;
 }
 .username {
   margin: 10px 0 0 20px;
@@ -62,12 +93,13 @@ p {
   padding: 7px 0 0 0;
   margin-bottom: 12px;
 }
-.status {
+.mobile__status {
   border: 1px solid var(--gray);
   padding: 5px;
   margin-bottom: 0;
+  margin-right: 2px;
   border-radius: 5px;
-  display: block;
+  display: flex;
 }
 .button--edit-profile {
   border: 1px solid var(--gray);
@@ -75,6 +107,10 @@ p {
   width: 100%;
   border-radius: 5px;
   font-weight: 600;
+}
+button:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 .contact {
   display: flex;
@@ -93,19 +129,29 @@ span a {
   display: flex;
   margin-top: 2em;
   list-style-type: none;
-  padding: 0;
-  justify-content: space-around;
+  padding: 8px 0 0 0;
   justify-content: flex-start;
+  overflow-x: scroll;
 }
 .tabs__parent {
   border-bottom: 1px solid var(--gray);
   position: sticky;
   top: 0;
-  background: #fff;
+  background: var(--white);
 }
 .tabs li {
   padding: 10px;
   display: flex;
+}
+.tabs li:hover {
+  border-bottom: 2px solid var(--gray);
+}
+.tabs li:nth-child(4) {
+  padding-right: 0;
+  padding-left: 0;
+}
+.tab-link svg {
+  display: none;
 }
 
 .badge {
@@ -120,6 +166,7 @@ span a {
   margin: 15px 12px;
   border-radius: 5px;
 }
+
 form > input {
   border: none;
   outline: none;
@@ -144,7 +191,9 @@ form > input {
   border: 1px solid #e1e4e8;
   padding: 5px 20px;
   background: #2ea44f;
-  color: #fff;
+  color: var(--white);
+  display: flex;
+  align-items: center;
 }
 .repositories {
   padding: 15px 12px;
@@ -157,39 +206,48 @@ form > input {
   padding-top: 20px;
 }
 .repository h3 {
-  /* color: #0366d6; */
   color: var(--primary);
+}
+.repository__desc {
+  margin-top: 8px;
 }
 .updated {
   font-size: 12px;
 }
+
 /* Animation of Shimmer Background */
 .shine {
   height: 25px;
   border: none;
   background: #f6f7f8;
-  background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  );
   background-repeat: no-repeat;
-  background-size: 800px 104px; 
+  background-size: 800px 104px;
   display: inline-block;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; 
+  animation-fill-mode: forwards;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   -webkit-animation-name: placeholderShimmer;
   animation-name: placeholderShimmer;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  }
-  @-webkit-keyframes placeholderShimmer {
+}
+@-webkit-keyframes placeholderShimmer {
   0% {
     background-position: -468px 0;
   }
-  
+
   100% {
-    background-position: 468px 0; 
+    background-position: 468px 0;
   }
 }
 
@@ -197,12 +255,13 @@ form > input {
   0% {
     background-position: -468px 0;
   }
-  
+
   100% {
-    background-position: 468px 0; 
+    background-position: 468px 0;
   }
 }
 /* End of animation */
+
 .left {
   width: 55%;
   display: flex;
@@ -240,12 +299,16 @@ small {
 .tabs .tab-item a {
   text-decoration: none;
   color: #363b40;
+  display: flex;
+  align-items: center;
 }
 .tab-item:nth-child(2) {
-  border-bottom: 2px solid;
-  border-color: #f9826c;
+  border-bottom: 2px solid #f9826c;
   font-weight: 600;
   display: flex;
+}
+.tab-item:nth-child(2):hover {
+  border-bottom: 2px solid #f9826c;
 }
 .footer ul {
   list-style-type: none;
@@ -256,18 +319,25 @@ small {
   padding: 40px 10px;
   margin-top: 70px;
 }
+.footer p {
+  margin-bottom: 0;
+}
 .footer ul li {
-    padding: 0px 10px;
-    display: flex;
-    /* color: #0366d6; */
-    color: var(--primary);
-  /* justify-content: center; */
-  }
-  .footer p {
-    margin-bottom: 0;
-  }
+  padding: 0px 10px;
+  display: flex;
+  color: var(--primary);
+}
+.footer ul li:hover {
+  cursor: pointer;
+}
 
 /* Media Queries for Responsiveness */
+@media screen and (min-width: 500px) {
+  .tabs__parent ul {
+    overflow: hidden;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .nav {
     padding: 12px 25px;
@@ -280,13 +350,16 @@ small {
     padding: 3px 6px;
     border-radius: 8px;
     background: transparent;
-    color: #fff;
+    color: var(--white);
     outline: transparent;
     width: 200px;
   }
+  .floating__status {
+    display: block;
+  }
   .nav_search {
     background: transparent;
-    color: #fff;
+    color: var(--white);
   }
   .bigscreen__nav {
     display: flex;
@@ -301,9 +374,16 @@ small {
     align-items: center;
   }
 
-.tabs li {
-  margin: 0 15px;
-}
+  .tabs li {
+    margin: 0 5px;
+  }
+  .tabs {
+    overflow-x: hidden;
+  }
+  .tab-link svg {
+    display: block;
+  }
+ 
   .hide {
     display: flex;
     align-items: center;
@@ -314,9 +394,8 @@ small {
     align-items: center;
   }
   .rightmenu__image {
-    /* width:25px; */
-    height:30px;
-    border-radius: 50%; 
+    height: 30px;
+    border-radius: 50%;
     display: inline-block;
   }
   .hide ul {
@@ -340,19 +419,22 @@ small {
     height: auto;
     object-fit: cover;
   }
- 
+
   .about {
     display: flex;
     flex-direction: column;
   }
   .job {
-    order: 0;
+    margin: 0;
+    padding: 0;
   }
   .status {
-    order: 1;
+    display: none;
+  }
+  .mobile__status {
+    display: none;
   }
   .button--edit-profile {
-    order: 2;
     margin-top: 12px;
   }
   .row {

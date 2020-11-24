@@ -2,17 +2,24 @@ export const query = `
   {
   viewer {
     login
+    name
     avatarUrl
     bio
-    company
+    location
     email
+    status {
+      emoji
+      emojiHTML
+      message
+    }
+    twitterUsername
     followers {
       totalCount
     }
     following {
       totalCount
     }
-    repositories(first: 10, privacy: PUBLIC) {
+    repositories(last: 10, privacy: PUBLIC) {
       nodes {
         name
         description
@@ -24,4 +31,5 @@ export const query = `
     }
   }
 }
+
 `;

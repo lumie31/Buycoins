@@ -6,9 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../assets/favicon.ico">
   <title>BuyCoins | Frontend Assessment</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
   <script src="https://kit.fontawesome.com/d9a8436209.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body>
@@ -19,7 +18,7 @@
         <span><i class="fab fa-github-square fa-3x"></i></span>
         <div class="hide">
           <form action="" class="navbar__search">
-            <input type="text" placeholder="Search" class="nav_search">
+            <input type="text" placeholder="Search or jump to..." class="nav_search">
           </form>
           <ul>
             <li>Pull requests</li>
@@ -37,7 +36,7 @@
             <i class="fas fa-caret-down"></i>
           </span>
           <span>
-            <img src="" alt="" class="rightmenu__image">&nbsp;
+            <img src="../assets/dummy.jpg" alt="avatar" class="rightmenu__image">&nbsp;
             <i class="fas fa-caret-down"></i>
           </span>
         </div>
@@ -48,28 +47,30 @@
       <div class="side">
         <div class="userinfo">
           <div class="userinfo__profile">
-            <img src="" alt="avatar" class="userimage" style="position: relative;">
-            <!-- <div style="border: 1px solid red; position:relative"> -->
-              <!-- <span style="position: relative; left:auto; bottom: 10vw; display: flex; justify-content: flex-end;">🚀</span> -->
-            <!-- </div> -->
+            <div style="position: relative;">
+              <img src="../assets/dummy.jpg" alt="avatar" class="userimage">
+              <span class="floating__status">
+                <!-- <span style="border:1px solid; display: none">Hello world</span> -->
+              </span>
+            </div>
             <div class="username">
-              <h2>Olumide</h2>
+              <h2></h2>
               <p></p>
             </div>
           </div>
         </div>
         <div class="about">
-          <small class="status">
-            🚀&nbsp;<span>World best!</span>
+          <small class="mobile__status">&nbsp;<span class="status"></span>
           </small>
-          <p class="job">Software Dev.</p>
+          <p class="job"></p>
           <button class="button button--edit-profile">Edit profile</button>
         </div>
         <div class="contact">
-          <span><i class="far fa-envelope"></i>&nbsp;<a class="email">josh@dev.co.za</a></span>
-          <span><i class="fas fa-link"></i>&nbsp;<a class="linkedin">josh@linkedin.ng</a></span>
-          <span><i class="fas fa-user-friends"></i>&nbsp;<a><b class="followers"></b> followers · <b class="following"></b> following · <i
-                class="far fa-star"></i>&nbsp;<b class="stars"></b></a></span>
+          <span><i class="far fa-envelope"></i>&nbsp;<a class="email"></a></span>
+          <span><i class="fas fa-map-marker-alt"></i>&nbsp;<a class="location"></a></span>
+          <span><i class="fab fa-twitter"></i>&nbsp;<a class="twitter__username"></a></span>
+          <span><i class="fas fa-user-friends"></i>&nbsp;<a><b class="followers"></b> followers · <b
+                class="following"></b> following · <i class="far fa-star"></i>&nbsp;<b class="stars"></b></a></span>
         </div>
       </div>
 
@@ -77,18 +78,50 @@
         <div class="tabs__parent">
           <ul class="tabs">
             <li class="tab-item">
-              <a href="#" class="tab-link">Overview</a>
+              <a href="#" class="tab-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="#959da5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-book-open">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>&nbsp;Overview
+              </a>
             </li>
             <li class="tab-item">
-              <a href="#" class="tab-link active">Repositories</a>
+              <a href="#" class="tab-link active">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="#363b40" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-book">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>&nbsp;Repositories
+              </a>
 
-              <span class="badge"><small>20</small></span>
+              <span class="badge"><small></small></span>
             </li>
             <li class="tab-item">
-              <a href="#" class="tab-link">Projects</a>
+              <a href="#" class="tab-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="#959da5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-bar-chart-2">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>&nbsp;Projects
+              </a>
             </li>
             <li class="tab-item">
-              <a href="#" class="tab-link "> Packages</a>
+              <a href="#" class="tab-link ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
+                  stroke="#959da5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-box">
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                  </path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>&nbsp;Packages
+              </a>
             </li>
           </ul>
         </div>
@@ -98,14 +131,23 @@
           </form>
           <div class="dropdown-btn">
             <div class="filter__dropdowns">
-              <button class="filter__dropdowns__btn btn--type">Type: <b>All</b>&nbsp;<i class="fas fa-caret-down"></i></button>
-              <button class="filter__dropdowns__btn">Language: <b>All</b>&nbsp;<i class="fas fa-caret-down"></i></button>
+              <button class="filter__dropdowns__btn btn--type">Type: <b>All</b>&nbsp;<i
+                  class="fas fa-caret-down"></i></button>
+              <button class="filter__dropdowns__btn">Language: <b>All</b>&nbsp;<i
+                  class="fas fa-caret-down"></i></button>
             </div>
-            <button class="filter__dropdowns__btn new">New</button>
+            <button class="filter__dropdowns__btn new">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-book">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>&nbsp;New
+            </button>
           </div>
         </div>
         <div class="repositories">
-           <div class="repository">
+          <div class="repository">
             <div class="left">
               <h3 class="repository__name shine"></h3>
               <p class="repository__desc shine"></p>
@@ -135,16 +177,6 @@
               <button class="star__btn shine"></button>
             </div>
           </div>
-          <!-- <div class="repository">
-            <div class="left">
-              <h3>Repo-name</h3>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iusto veritatis qui eum, odio enim, </p>
-              <small class="updated">Updated 2 days ago</small>
-            </div>
-            <div class="right">
-              <button class="star__btn"><i class="far fa-star"></i>&nbsp;Star</button>
-            </div>
-          </div> -->
         </div>
         <div class="button prev__next">
           <button class="btn__group prev">Previous</button>
@@ -152,10 +184,11 @@
         </div>
       </div>
     </div>
+
     <div class="footer">
       <ul>
         <li>
-          <p>&copy; 2020 GitHub, Inc.</p>
+          <p class="copy">&copy; 2020 GitHub, Inc.</p>
         </li>
         <li>Terms</li>
         <li>Privacy</li>

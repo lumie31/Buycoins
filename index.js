@@ -29,7 +29,7 @@ fetch(`https://api.github.com/graphql`, {
 })
   .then((res) => res.json())
   .then((data) => {
-    console.log("Success:", data.data.viewer);
+    // console.log("Success:", data.data.viewer);
 
     removeAllChildNodes(repositories);
 

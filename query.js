@@ -21,12 +21,12 @@ export const query = `
     following {
       totalCount
     }
-    repositories(last: 10, privacy: PUBLIC) {
+    repositories(first:20, privacy: PUBLIC, orderBy: {field: UPDATED_AT, direction: DESC}) {
       nodes {
         name
         description
         updatedAt
-        languages(last:10) {
+        languages(first:20) {
           nodes{
             color
             name
@@ -42,6 +42,3 @@ export const query = `
 }
 
 `;
-
-// GitHub access token - This should be secret. I tried putting this in a separate file and adding the file in a .gitignore but the file couldn't be accessed in production, hence my reason for exposing it.
-export const API_KEY = "split,bb8745e1f96b8b123116156ae3cf0f49fdecceb2,flirt";

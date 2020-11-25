@@ -1,4 +1,9 @@
-import { query, API_KEY } from "./config.js";
+// import dotenv from "./public/index.html";
+// require("dotenv").config();
+// dotenv.config({ silent: true });
+
+import { query } from "./query.js";
+import { API_KEY } from "./token.js"
 
 const data = { query };
 
@@ -22,7 +27,7 @@ const repositories = document.querySelector(".repositories");
 fetch(`https://api.github.com/graphql`, {
   method: "POST",
   headers: {
-    "Authorization": `bearer ${API_KEY.split(",")[1]}`,
+    "Authorization": `bearer ${API_KEY}`,
     "Content-Type": "application/json",
   },
   body: JSON.stringify(data),
@@ -67,7 +72,7 @@ const removeAllChildNodes = (parent) => {
 }
 
 const addChildNode = (repo) => {
-  // console.log(repo.languages.nodes[0])
+  console.log(repo.languages.nodes[0])
   let repository = document.createElement("div");
   repository.className = "repository";
 
@@ -95,11 +100,15 @@ const addChildNode = (repo) => {
 
   let spanColor = document.createElement("span");
   spanColor.className = "color__icon";
-  spanColor.style.backgroundColor = repo.languages.nodes[0].color;
+  spanColor.style.backgroundColor = repo.languages.nodes[0] == undefined ? "#f1e05a" : repo.languages.nodes[0].color;
 
   let spanLang = document.createElement("span");
   spanLang.className = "language";
-  let spanLangTextNode = document.createTextNode(repo.languages.nodes[0].name);
+  let spanLangTextNode = document.createTextNode(
+    repo.languages.nodes[0] == undefined
+      ? "JavaScript"
+      : repo.languages.nodes[0].name
+  );
   spanLang.appendChild(spanLangTextNode);
 
   smallMain.appendChild(spanColor);
@@ -136,7 +145,6 @@ const addChildNode = (repo) => {
 
   repositories.appendChild(repository);
 }
-
 // const xDaysFromNow = (dateString) => {
 //   let today = new Date();
 //   let targetDate = new Date(dateString);

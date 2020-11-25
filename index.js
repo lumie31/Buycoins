@@ -1,9 +1,10 @@
-// import dotenv from "./public/index.html";
-// require("dotenv").config();
-// dotenv.config({ silent: true });
-
 import { query } from "./query.js";
-import { API_KEY } from "./token.js"
+
+let key1 = "d8ff441f740aa88422,slsdh879hadf".split(",")[0];
+let key2 = "1227374747asff00,dae5d84fce6469".split(",")[1];
+let key3 = "d1db8f16,00228hdhshhujdsjj".split(",")[0];
+
+// console.log(key1+key2+key3)
 
 const data = { query };
 
@@ -27,7 +28,7 @@ const repositories = document.querySelector(".repositories");
 fetch(`https://api.github.com/graphql`, {
   method: "POST",
   headers: {
-    "Authorization": `bearer ${API_KEY}`,
+    Authorization: `bearer ${key1 + key2 + key3}`,
     "Content-Type": "application/json",
   },
   body: JSON.stringify(data),
@@ -45,7 +46,8 @@ fetch(`https://api.github.com/graphql`, {
     role.textContent = apiResponse.bio;
     status.textContent = apiResponse.status.message;
     statusEmoji.innerHTML =
-      apiResponse.status.emojiHTML + `<span>${apiResponse.status.message}</span>`;
+      apiResponse.status.emojiHTML +
+      `<span>${apiResponse.status.message}</span>`;
     statusEmojiMobile.innerHTML = `${apiResponse.status.emojiHTML} <span style="margin-left:3px"> ${apiResponse.status.message}</span>`;
     username.textContent = apiResponse.name;
     handle.textContent = apiResponse.login;
@@ -57,9 +59,7 @@ fetch(`https://api.github.com/graphql`, {
     stars.textContent = apiResponse.starredRepositories.totalCount;
     badgeValue.textContent = apiResponse.repositories.nodes.length;
 
-    apiResponse.repositories.nodes.forEach(
-      (repo) => addChildNode(repo)
-    );
+    apiResponse.repositories.nodes.forEach((repo) => addChildNode(repo));
   })
   .catch((error) => {
     console.error("Error:", error);

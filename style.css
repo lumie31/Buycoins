@@ -125,7 +125,7 @@ button:hover {
 }
 small.followers, .following, .stars {
   font-weight: 650;
-  color: var(--black) !important;
+  color: var(--black);
 }
 span a {
   color: var(--black);
@@ -384,9 +384,6 @@ small {
   }
   .hamburger {
     display: none;
-  }
-  .row {
-    /* padding: 0 1em; */
   }
   .navbar__search {
     border: 1px solid grey;

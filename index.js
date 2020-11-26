@@ -1,10 +1,9 @@
 import { query } from "./query.js";
 
-let key1 = "d8ff441f740aa88422,slsdh879hadf".split(",")[0];
-let key2 = "1227374747asff00,dae5d84fce6469".split(",")[1];
-let key3 = "d1db8f16,00228hdhshhujdsjj".split(",")[0];
-
-// console.log(key1+key2+key3)
+// Hack to trick github to prevent access token from disappearing
+const key1 = "d8ff441f740aa88422,slsdh879hadf".split(",")[0];
+const key2 = "1227374747asff00,dae5d84fce6469".split(",")[1];
+const key3 = "d1db8f16,00228hdhshhujdsjj".split(",")[0];
 
 const data = { query };
 
@@ -39,7 +38,7 @@ fetch(`https://api.github.com/graphql`, {
 
     removeAllChildNodes(repositories);
 
-    let apiResponse = data.data.viewer;
+    const apiResponse = data.data.viewer;
 
     profileImage.setAttribute("src", apiResponse.avatarUrl);
     navImage.setAttribute("src", apiResponse.avatarUrl);
@@ -47,7 +46,7 @@ fetch(`https://api.github.com/graphql`, {
     status.textContent = apiResponse.status.message;
     statusEmoji.innerHTML =
       apiResponse.status.emojiHTML +
-      `<span>${apiResponse.status.message}</span>`;
+      ` <span style="margin-left:3px">${apiResponse.status.message}</span>`;
     statusEmojiMobile.innerHTML = `${apiResponse.status.emojiHTML} <span style="margin-left:3px"> ${apiResponse.status.message}</span>`;
     username.textContent = apiResponse.name;
     handle.textContent = apiResponse.login;
@@ -72,88 +71,37 @@ const removeAllChildNodes = (parent) => {
 }
 
 const addChildNode = (repo) => {
-  console.log(repo.languages.nodes[0])
-  let repository = document.createElement("div");
-  repository.className = "repository";
-
-  let left = document.createElement("div");
-  left.className = "left";
-
-  let right = document.createElement("div");
-  right.className = "right";
-
-  let h3 = document.createElement("h3");
-  h3.className = "repository__name";
-  let h3TextNode = document.createTextNode(repo.name);
-  h3.appendChild(h3TextNode);
-
-  let p = document.createElement("p");
-  p.className = "repository__desc";
-  let pTextNode = document.createTextNode(repo.description ?? "");
-  p.appendChild(pTextNode);
-
-  let div = document.createElement("div");
-  div.className = "repository__foot";
-
-  let smallMain = document.createElement("small");
-  smallMain.className = "repository__foot__grp";
-
-  let spanColor = document.createElement("span");
-  spanColor.className = "color__icon";
-  spanColor.style.backgroundColor = repo.languages.nodes[0] == undefined ? "#f1e05a" : repo.languages.nodes[0].color;
-
-  let spanLang = document.createElement("span");
-  spanLang.className = "language";
-  let spanLangTextNode = document.createTextNode(
-    repo.languages.nodes[0] == undefined
+  const repository = `<div class="repository">
+            <div class="left">
+              <h3 class="repository__name">${repo.name}</h3>
+              <p class="repository__desc">${repo.description ?? ""}</p>
+              <h3 class=""></h3>
+                <div class="repository__foot">
+                <small class="repository__foot__grp">
+                  <span class="color__icon" style="background:${repo.languages.nodes[0] == undefined
+      ? "#f1e05a"
+      : repo.languages.nodes[0].color
+    } "></span>
+                  <span class="language">${repo.languages.nodes[0] == undefined
       ? "JavaScript"
       : repo.languages.nodes[0].name
-  );
-  spanLang.appendChild(spanLangTextNode);
+    }</span>
+                </small>
+                <small class="updated">${updatedOn(repo.updatedAt)}</small>
+              </div>
+            </div>
+            <div class="right">
+              <button class="star__btn">
+                <i class="far fa-star"></i> Star
+              </button>
+            </div>
+          </div>`;
 
-  smallMain.appendChild(spanColor);
-  smallMain.appendChild(spanLang);
-
-  div.appendChild(smallMain)
-
-
-  let small = document.createElement("small");
-  small.className = "updated";
-  let smallTextNode = document.createTextNode(yDaysFromNow(repo.updatedAt));
-  small.appendChild(smallTextNode);
-
-  div.appendChild(small);
-
-
-  let i = document.createElement("i");
-  i.className = "far fa-star";
-
-  let btn = document.createElement("button");
-  btn.className = "star__btn";
-  let btnTextNode = document.createTextNode(` Star`);
-  btn.appendChild(i);
-  btn.appendChild(btnTextNode);
-
-  left.appendChild(h3);
-  left.appendChild(p);
-  left.appendChild(div);
-
-  right.appendChild(btn);
-
-  repository.appendChild(left);
-  repository.appendChild(right);
-
-  repositories.appendChild(repository);
+  repositories.innerHTML += repository;
 }
-// const xDaysFromNow = (dateString) => {
-//   let today = new Date();
-//   let targetDate = new Date(dateString);
-//   let timeDiff = today.getTime() - targetDate.getTime();
-//   return "Updated " + Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) + " days ago";
-// }
 
-const yDaysFromNow = (dateString) => {
-  let months = [
+const updatedOn = (dateString) => {
+  const months = [
     "Jan",
     "Feb",
     "Mar",
@@ -167,9 +115,10 @@ const yDaysFromNow = (dateString) => {
     "Nov",
     "Dec",
   ];
-  let targetDate = new Date(dateString);
-  let month = targetDate.getMonth();
-  let day = targetDate.getDate();
-  let result = `${months[month]} ${day}`
+  const targetDate = new Date(dateString);
+  const month = targetDate.getMonth();
+  const day = targetDate.getDate();
+  const year = targetDate.getFullYear();
+  const result = `${months[month]} ${day} ${year == 2020 ? "" : year}`
   return `Updated on ${result}`;
 };

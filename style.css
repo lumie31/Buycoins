@@ -8,7 +8,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI";
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
 }
 p,
 a,
@@ -31,7 +31,7 @@ h2 {
   color: var(--white);
 }
 .nav span:hover,
-.nav li:hover {
+.nav li:hover, .rightmenu svg:hover {
   opacity: 0.7;
   cursor: pointer;
 }
@@ -63,7 +63,6 @@ h2 {
 }
 .floating__status:hover {
   cursor: pointer;
-  /* opacity: 0.9; */
 }
 .userinfo {
   padding: 12px;
@@ -102,6 +101,7 @@ p {
   margin-right: 2px;
   border-radius: 5px;
   display: flex;
+  align-items: center;
 }
 .button--edit-profile {
   border: 1px solid var(--gray);
@@ -218,6 +218,7 @@ form > input {
   color: var(--primary);
   font-weight: 600;
 }
+
 .repository__desc {
   margin-top: 8px;
   color: #586069;
@@ -384,6 +385,9 @@ small {
   .hamburger {
     display: none;
   }
+  .row {
+    /* padding: 0 1em; */
+  }
   .navbar__search {
     border: 1px solid grey;
     padding: 3px 6px;
@@ -515,3 +519,4 @@ small {
     padding-left: 5px;
   }
 }
+

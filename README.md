@@ -24,7 +24,7 @@ This project is a re-creation of my GitHub profile "repositories" tab leveraging
 1. The case of my font-family not working correctly when I tested with apple devices (I use a Windows PC)
 ## How I fixed them / Things I learnt
 1. I got the grasp of the GraphQL API Explorer and everything became clear onwards. 
-1. I learnt that GitHub deletes it access token (single string) whenever it's committed to a GitHub repository. So my walkaround this was to break the access token into several variables and concatenate them at the point of Authorizing. This meant that the token wasn't coming as a single string but as several variables concatenated together.
+1. I learnt that GitHub deletes it access token (single string) whenever it's committed to a GitHub repository.  So my walkaround this was to break the access token into several variables and concatenate them at the point of Authorizing. This meant that the token wasn't coming as a single string but as several variables concatenated together. (A better solution would have been storing my secret in a `.env` file and ignoring it using a `.gitignore` file but since I didn't want to use any `npm` module  for that purpose, hence my solution above)
 
 1. The font-family Github uses is a default font on Windows so I didn't have to import an external font. Testing on a Windows machine and Android seemed fine until I tested the project on a Mac and an iPhone and noticed the font-family wasn't working. My walkaround this was to add a font-family fallback which catered for the Apple device space and this solved the issue of breaking font-family
 

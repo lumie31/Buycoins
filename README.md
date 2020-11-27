@@ -15,6 +15,7 @@ This project is a re-creation of my GitHub profile "repositories" tab leveraging
 - CSS
 - JavaScript
 - GraphQL API Explorer
+- Netlify
 
 ## Some Issues I encountered
 1. This project is my first experience working with the GraphQL GitHub API. Even though I'm familiar with the idea behind GraphQL, getting a hang of the API posed an issue at first. 
